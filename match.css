@@ -1,0 +1,566 @@
+/*==================================
+        CONFIGURACIÓN GENERAL
+===================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Fredoka',sans-serif;
+}
+
+body{
+
+    background:linear-gradient(180deg,#bde9ff,#dff7ff,#ffffff);
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+}
+
+/* Césped */
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    bottom:0;
+
+    left:0;
+
+    width:100%;
+
+    height:90px;
+
+    background:linear-gradient(#59d14c,#36b037);
+
+    z-index:-2;
+
+}
+
+/*==================================
+        CONTENEDOR
+===================================*/
+
+.fondo{
+
+    padding:30px;
+
+}
+
+.contenedor{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    background:white;
+
+    border-radius:30px;
+
+    padding:30px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.20);
+
+}
+
+/*==================================
+            ENCABEZADO
+===================================*/
+
+header{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+}
+
+header h1{
+
+    background:linear-gradient(90deg,#6d5dfc,#8f6fff);
+
+    color:white;
+
+    padding:18px;
+
+    border-radius:20px;
+
+    font-size:38px;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.20);
+
+}
+
+header p{
+
+    margin-top:18px;
+
+    background:#ffe66d;
+
+    color:#444;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    padding:15px;
+
+    border-radius:15px;
+
+}
+
+/*==================================
+        PANEL SUPERIOR
+===================================*/
+
+.panelSuperior{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:25px;
+
+    margin-bottom:30px;
+
+}
+
+.cronometro{
+
+    width:180px;
+
+    background:#ff5b5b;
+
+    color:white;
+
+    border-radius:20px;
+
+    padding:20px;
+
+    text-align:center;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.20);
+
+}
+
+.cronometro span{
+
+    font-size:22px;
+
+    font-weight:bold;
+
+}
+
+#timer{
+
+    margin-top:8px;
+
+    font-size:42px;
+
+    font-weight:bold;
+
+}
+
+/*==================================
+            MASCOTA
+===================================*/
+
+.mascotaBox{
+
+    flex:1;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    background:#eef9ff;
+
+    border:3px solid #8ad7ff;
+
+    border-radius:20px;
+
+    padding:20px;
+
+}
+
+.mascota{
+
+    width:120px;
+
+}
+
+.mascotaGrande{
+
+    width:180px;
+
+}
+
+#msg{
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    color:#0b5c8a;
+
+}
+
+/*==================================
+            NIVEL
+===================================*/
+
+#nivelTitulo{
+
+    background:#44b9ff;
+
+    color:white;
+
+    text-align:center;
+
+    padding:15px;
+
+    border-radius:18px;
+
+    margin-bottom:30px;
+
+    font-size:28px;
+
+}
+
+/*==================================
+        TABLERO
+===================================*/
+
+.juego{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:60px;
+
+}
+
+.columna{
+
+    width:48%;
+
+}
+
+.columna h3{
+
+    text-align:center;
+
+    margin-bottom:20px;
+
+    color:#0b5c8a;
+
+    font-size:24px;
+
+}
+
+/*==================================
+        TARJETAS DEL JUEGO
+===================================*/
+
+.tarjeta{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:16px;
+
+    margin-bottom:18px;
+
+    border-radius:18px;
+
+    color:white;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    box-shadow:0 8px 16px rgba(0,0,0,.18);
+
+}
+
+#izq .tarjeta:nth-child(4n+1){
+    background:linear-gradient(135deg,#ff6b6b,#ff9b9b);
+}
+
+#izq .tarjeta:nth-child(4n+2){
+    background:linear-gradient(135deg,#4dabf7,#8fd3ff);
+}
+
+#izq .tarjeta:nth-child(4n+3){
+    background:linear-gradient(135deg,#51cf66,#8ce99a);
+}
+
+#izq .tarjeta:nth-child(4n+4){
+    background:linear-gradient(135deg,#ffa94d,#ffd43b);
+}
+
+.tarjeta img{
+
+    width:65px;
+
+    height:65px;
+
+    object-fit:contain;
+
+    background:white;
+
+    padding:8px;
+
+    border-radius:15px;
+
+}
+
+/*==================================
+        ZONAS DE RESPUESTA
+===================================*/
+
+.opcion{
+
+    height:90px;
+
+    margin-bottom:18px;
+
+    border:4px dashed #74c0fc;
+
+    border-radius:18px;
+
+    background:#eef8ff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    transition:.25s;
+
+}
+
+.opcion:hover{
+
+    background:#dff3ff;
+
+    transform:scale(1.02);
+
+}
+
+/*==================================
+      TARJETAS ARRASTRABLES
+===================================*/
+
+.arr{
+
+    background:white;
+
+    border:3px solid #5aaeff;
+
+    border-radius:18px;
+
+    padding:14px;
+
+    margin-bottom:18px;
+
+    text-align:center;
+
+    cursor:grab;
+
+    font-size:21px;
+
+    font-weight:bold;
+
+    box-shadow:0 6px 14px rgba(0,0,0,.18);
+
+    transition:.25s;
+
+}
+
+.arr:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.arr:active{
+
+    cursor:grabbing;
+
+}
+
+.arr img{
+
+    width:60px;
+
+    height:60px;
+
+    display:block;
+
+    margin:auto;
+
+    margin-bottom:8px;
+
+}
+
+/* Cuando la tarjeta se coloca */
+
+.opcion .arr{
+
+    width:96%;
+
+    margin:0;
+
+}
+
+/*==================================
+            BOTONES
+===================================*/
+
+.botones{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    margin-top:35px;
+
+}
+
+.btn{
+
+    border:none;
+
+    border-radius:18px;
+
+    padding:16px 35px;
+
+    color:white;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.20);
+
+}
+
+.verificar{
+
+    background:linear-gradient(#52c41a,#389e0d);
+
+}
+
+.reiniciar{
+
+    background:linear-gradient(#4dabf7,#1971c2);
+
+}
+
+.continuar{
+
+    background:linear-gradient(#845ef7,#5f3dc4);
+
+}
+
+.btn:hover{
+
+    transform:translateY(-4px);
+
+}
+
+/*==================================
+              MODAL
+===================================*/
+
+.modal{
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.55);
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.ventana{
+
+    width:700px;
+
+    max-width:95%;
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:30px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.30);
+
+}
+
+.contenidoModal{
+
+    flex:1;
+
+}
+
+.contenidoModal h2{
+
+    color:#6d5dfc;
+
+    font-size:34px;
+
+    margin-bottom:15px;
+
+}
+
+#resultado{
+
+    font-size:22px;
+
+    margin-bottom:15px;
+
+}
+
+#mensajeFinal{
+
+    color:#2b8a3e;
+
+    font-size:28px;
+
+    margin-bottom:20px;
+
+}
